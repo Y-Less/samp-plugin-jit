@@ -1319,6 +1319,29 @@ void CompilerAsmjit::numargs() {
   asm_.shr(eax, 2);
 }
 
+//void CompilerAsmjit::getarg() {
+//  asm_.mov(eax, dword_ptr(esp, 4));
+//  asm_.shr(eax, 2);
+//  asm_.add(eax, 12);
+//  asm_.mov(edx, dword_ptr(ebp, eax));
+//  asm_.mov(eax, dword_ptr(esp, 8));
+//  asm_.shr(eax, 2);
+//  asm_.mov(eax, dword_ptr(edx, eax));
+//}
+//
+//void CompilerAsmjit::setarg() {
+//  asm_.mov(eax, dword_ptr(esp, 4));
+//  asm_.shr(eax, 2);
+//  asm_.add(eax, 12);
+//  asm_.mov(edx, dword_ptr(ebp, eax));
+//  asm_.mov(eax, dword_ptr(esp, 8));
+//  asm_.shr(eax, 2);
+//  asm_.add(eax, edx);
+//  asm_.mov(edx, dword_ptr(esp, 12));
+//  asm_.mov(dword_ptr(eax), edx);
+//  asm_.xor(eax, eax);
+//}
+
 void CompilerAsmjit::min() {
   asmjit::Label exit = asm_.newLabel();
     asm_.mov(eax, dword_ptr(esp, 4));
